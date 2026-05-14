@@ -9,7 +9,7 @@ A warm, slow camera drift across a wooden table scattered with the family's pola
   <img src="assets/screensaver.gif" alt="15-second clip of the screensaver: camera drifting across a floral tabletop scattered with polaroid photos, then zooming in on one" width="720" />
 </a>
 
-<sub><em>Click the GIF for the full-quality MP4.</em></sub>
+<sub><em>15s @ 30fps, captured 1:1 from the running screensaver. Click the GIF for the 1440×900 MP4.</em></sub>
 
 <br/>
 
