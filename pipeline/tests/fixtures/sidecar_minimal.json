@@ -1,0 +1,18 @@
+[
+  {
+    "timestamp": 1521839641,
+    "attachments": [
+      {
+        "data": [
+          {
+            "media": {
+              "uri": "your_facebook_activity/posts/media/IMG_1234.jpg",
+              "creation_timestamp": 1521839641
+            }
+          }
+        ]
+      }
+    ],
+    "title": "Sunset photo"
+  }
+]

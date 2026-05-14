@@ -1,0 +1,21 @@
+/* Phase 1 prototype — full-viewport canvas, scrapbook tone background */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #1a140e;          /* CONFIG.COLOR_BACKGROUND — warm brown, not black */
+  overflow: hidden;
+}
+body {
+  /* Respect prefers-reduced-motion at the document level (PERF-04 hook) */
+  /* Plan 05/06 read window.matchMedia for actual motion behavior changes */
+}
+canvas#scene {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+@media (prefers-reduced-motion: reduce) {
+  body { /* Plan 05/06 actually slows motion; the media query stub lives here */ }
+}

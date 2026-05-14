@@ -1,0 +1,42 @@
+[
+  {
+    "timestamp": 1600000000,
+    "attachments": [
+      {
+        "data": [
+          {
+            "media": {
+              "uri": "your_facebook_activity/posts/media/photo_a.jpg",
+              "creation_timestamp": 1600000000
+            }
+          },
+          {
+            "media": {
+              "uri": "your_facebook_activity/posts/media/photo_b.jpg",
+              "creation_timestamp": 1600000100
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": 1700000000,
+    "title": "post with no attachments"
+  },
+  {
+    "timestamp": 1800000000,
+    "attachments": [
+      {
+        "data": [
+          {
+            "media": {
+              "uri": "your_facebook_activity/posts/media/photo_c.jpg",
+              "creation_timestamp": 1800000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

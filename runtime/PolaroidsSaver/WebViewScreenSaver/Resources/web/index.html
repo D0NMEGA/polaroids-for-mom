@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WKWebView rAF Smoke Test</title>
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; background: #111; color: #eee;
+    font-family: -apple-system, "SF Pro Display", sans-serif; overflow: hidden; }
+  .stack { position: absolute; inset: 0; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 24px; }
+  #counter { font-size: 22vh; font-weight: 200; font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em; }
+  #clock { font-size: 6vh; font-weight: 300; opacity: 0.7;
+    font-variant-numeric: tabular-nums; }
+  #status { font-size: 3vh; font-weight: 400; opacity: 0.55; }
+</style>
+</head>
+<body>
+<div class="stack">
+  <div id="counter">0</div>
+  <div id="clock">00:00:00</div>
+  <div id="status">If these freeze for &gt;2s, occlusion fix failed</div>
+</div>
+<script>
+  const counterEl = document.getElementById('counter');
+  const clockEl = document.getElementById('clock');
+  let frameCount = 0;
+  let startTime = performance.now();
+
+  function tick() {
+    frameCount++;
+    counterEl.textContent = frameCount.toString();
+    const elapsedSec = Math.floor((performance.now() - startTime) / 1000);
+    const hh = String(Math.floor(elapsedSec / 3600)).padStart(2, '0');
+    const mm = String(Math.floor((elapsedSec % 3600) / 60)).padStart(2, '0');
+    const ss = String(elapsedSec % 60).padStart(2, '0');
+    clockEl.textContent = `${hh}:${mm}:${ss}`;
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+
+  document.addEventListener('visibilitychange', () => {
+    console.log('[smoke] visibilitychange document.hidden=', document.hidden);
+  });
+</script>
+</body>
+</html>

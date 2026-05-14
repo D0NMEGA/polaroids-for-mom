@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Pipeline outputs (build artifacts, not source)
+state.sqlite
+state.sqlite-journal
+state.sqlite-wal
+state.sqlite-shm
+pool/
